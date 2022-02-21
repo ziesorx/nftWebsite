@@ -51,12 +51,13 @@ const initialize = () => {
     const networkId = await ethereum.request({ method: "net_version" });
 
     //Eth_Accounts-getAccountsButton
-    getAccountsButton.addEventListener("click", async () => {
-      //we use eth_accounts because it returns a list of addresses owned by us.
 
-      //We take the first address in the array of addresses and display it
-      getAccountsResult.innerHTML = accounts[0] || "Not able to get accounts";
-    });
+    // getAccountsButton.addEventListener("click", async () => {
+    //   //we use eth_accounts because it returns a list of addresses owned by us.
+
+    //   //We take the first address in the array of addresses and display it
+    //   getAccountsResult.innerHTML = accounts[0] || "Not able to get accounts";
+    // });
 
     const conCheck = await isMetaMaskConnected();
     //Now we check to see if MetaMask is installed
@@ -116,4 +117,4 @@ const checkNFT = async () => {
     })
     .catch((err) => console.error(err));
 };
-checkbtn.addEventListener("click", checkNFT);
+// checkbtn.addEventListener("click", checkNFT);

@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>NFT Website</title>
-    <script type="module" defer src="script.js"></script>
+    <!-- <script type="module" defer src="script.js"></script> -->
+    <script
+        src="node_modules/@metamask/onboarding/dist/metamask-onboarding.bundle.js"
+        defer
+      ></script>
+      <script defer src="/src/Metamask/contract.js"></script>
   </head>
   <body>
     <header>
       <nav class="nav">
         <img
-        src="img/logo.png"
+        src="/img/twitter.png"
         alt="Snoop logo"
         class="nav__logo"
         id="logo"
@@ -28,9 +33,9 @@
             <a class="nav__link" href="#section--2">FAQ</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-            >Activate membership</a
-            >
+            <button class="nav__link nav__link--btn btn--show-modal" id="connectButton">
+              Activate membership
+            </button>
           </li>
         </ul>
       </nav>
@@ -73,5 +78,7 @@
       </div>
       <button class="btn btn--show-modal">Become a member now!</button>
     </section>
+
+    
   </body>
 </html>
